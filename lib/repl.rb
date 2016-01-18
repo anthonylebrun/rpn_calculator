@@ -20,6 +20,22 @@ class REPL
     handle_input(gets)
   end
 
+  def quit
+    exit
+  end
+
+  def result(result)
+    MessagePrinter.success("%g" % result) if result
+  end
+
+  def notice(message)
+    MessagePrinter.notice(message)
+  end
+
+  def error(message)
+    MessagePrinter.error(message)
+  end
+
   private
 
   def handle_input(raw_input)
@@ -32,34 +48,26 @@ class REPL
     elsif command = CommandLookup.new(self, input.value).result
       handle_command(command)
     else
-      print_error($language.errors.invalid_input)
+      error($language.errors.invalid_input)
     end
 
     listen!
   end
 
   def handle_number(value)
-    print_result calculator.add_value(value)
+    result calculator.add_value(value)
   end
 
   def handle_operator(operator)
     begin
-      print_result calculator.run_operator(operator)
+      result calculator.run_operator(operator)
     rescue OperatorError => e
-      print_error(e.message)
+      error e.message
     end
   end
 
   def handle_command(command)
-    command.execute
-  end
-
-  def print_result(result)
-    MessagePrinter.success("%g" % result)
-  end
-
-  def print_error(message)
-    MessagePrinter.error(message)
+    result command.execute
   end
 
 end
