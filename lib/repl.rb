@@ -45,7 +45,7 @@ class REPL
   def handle_operator(operator)
     begin
       print_result calculator.run_operator(operator)
-    rescue OperatorError, CalculatorError => e
+    rescue OperatorError => e
       print_error(e.message)
     end
   end
