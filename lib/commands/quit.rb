@@ -11,8 +11,8 @@ module Commands
     end
 
     def execute
-      MessagePrinter.notice($language.misc.bye)
-      exit
+      repl.notice $language.misc.bye
+      repl.quit
     end
 
   end

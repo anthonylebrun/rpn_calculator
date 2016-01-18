@@ -10,9 +10,9 @@ module Commands
     end
 
     def execute
-      puts $language.help.usage.light_blue
-      puts $language.help.learn.light_blue
-      puts $language.help.commands.light_blue
+      repl.notice $language.help.usage.light_blue
+      repl.notice $language.help.learn.light_blue
+      repl.notice $language.help.commands.light_blue
     end
 
   end
