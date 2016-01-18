@@ -1,0 +1,11 @@
+help:
+  usage: 'For usage instructions see: https://gist.github.com/nilbus/29b0752086f59af3e2bb'
+  learn: 'For more information on Reverse Polish notation, google it!'
+  commands: 'Available commands are help, clear, and quit'
+
+errors:
+  invalid_input: 'Invalid Input. Type `help` for more information.'
+  wrong_arguments_number: 'Wrong number of arguments for this operator.'
+
+misc:
+  bye: 'So long! https://www.youtube.com/watch?v=Qy9_lfjQopU'
