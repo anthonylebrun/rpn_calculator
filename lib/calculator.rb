@@ -1,5 +1,9 @@
 # The RPN calculator part :)
 
+# If a method adds to the sack, it should
+# return that value, otherwise it should
+# return nil
+
 class Calculator
 
   attr_accessor :stack
@@ -24,6 +28,7 @@ class Calculator
 
   def reset
     stack.clear
+    nil
   end
 
 end
