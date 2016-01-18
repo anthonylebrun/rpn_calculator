@@ -1,8 +1,5 @@
-require_relative './command'
-require_relative '../message_printer'
-
 module Commands
-  class Quit < Command
+  class Quit
 
     SYNONYMS = ['quit', 'exit', 'q', nil]
 
@@ -10,7 +7,7 @@ module Commands
       SYNONYMS
     end
 
-    def execute
+    def execute(repl = nil)
       repl.notice $language.misc.bye
       repl.quit
     end

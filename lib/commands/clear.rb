@@ -1,7 +1,5 @@
-require_relative './command'
-
 module Commands
-  class Clear < Command
+  class Clear
 
     SYNONYMS = ['clear']
 
@@ -9,7 +7,7 @@ module Commands
       SYNONYMS
     end
 
-    def execute
+    def execute(repl = nil)
       repl.calculator.reset
     end
 

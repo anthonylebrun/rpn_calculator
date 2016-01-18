@@ -1,7 +1,5 @@
-require_relative './command'
-
 module Commands
-  class AddPi < Command
+  class AddPi
 
     SYNONYMS = ['pi']
 
@@ -9,7 +7,7 @@ module Commands
       SYNONYMS
     end
 
-    def execute
+    def execute(repl = nil)
       repl.calculator.add_value(Math::PI)
     end
 

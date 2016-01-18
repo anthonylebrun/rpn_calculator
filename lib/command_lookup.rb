@@ -10,8 +10,7 @@ class CommandLookup
 
   attr_reader :result
 
-  def initialize(repl, name)
-    @repl = repl
+  def initialize(name)
     @result = find_by_name(name)
   end
 
@@ -24,7 +23,7 @@ class CommandLookup
       command.synonyms.include?(name)
     end
 
-    command && command.new(repl)
+    command && command.new
   end
 
   def all_commands

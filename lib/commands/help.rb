@@ -1,7 +1,5 @@
-require_relative './command'
-
 module Commands
-  class Help < Command
+  class Help
 
     SYNONYMS = ['help']
 
@@ -9,7 +7,7 @@ module Commands
       SYNONYMS
     end
 
-    def execute
+    def execute(repl = nil)
       repl.notice $language.help.usage.light_blue
       repl.notice $language.help.learn.light_blue
       repl.notice $language.help.commands.light_blue

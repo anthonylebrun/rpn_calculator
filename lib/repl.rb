@@ -45,7 +45,7 @@ class REPL
       handle_number(input.value)
     elsif operator = OperatorLookup.new(input.value).result
       handle_operator(operator)
-    elsif command = CommandLookup.new(self, input.value).result
+    elsif command = CommandLookup.new(input.value).result
       handle_command(command)
     else
       error($language.errors.invalid_input)
@@ -67,7 +67,7 @@ class REPL
   end
 
   def handle_command(command)
-    result command.execute
+    result command.execute(self)
   end
 
 end
