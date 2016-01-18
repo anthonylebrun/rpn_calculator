@@ -1,7 +1,7 @@
-require_relative '../exceptions'
+require_relative './operator'
 
 module Operators
-  class Multiplication
+  class Multiplication < Operator
 
     SYMBOLS = ['*']
     NUMBER_OF_ARGUMENTS = 2
@@ -17,12 +17,6 @@ module Operators
 
     def number_of_arguments
       NUMBER_OF_ARGUMENTS
-    end
-
-    private
-
-    def argument_error
-      raise OperatorError, $language.errors.wrong_arguments_number
     end
 
   end
