@@ -19,10 +19,6 @@ class Input < Value.new(:raw)
 
   private
 
-  def number_value
-    Float(@value)
-  end
-
   def reformat(raw)
     raw && raw.strip
   end
