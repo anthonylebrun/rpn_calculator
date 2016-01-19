@@ -1,4 +1,4 @@
-require_relative '../exceptions'
+OperatorError = Class.new(StandardError)
 
 class Operator
 

@@ -3,7 +3,6 @@ require_relative './operator_lookup'
 require_relative './command_lookup'
 require_relative './language'
 require_relative './message_printer'
-require_relative './exceptions'
 
 # Well, it's a REPL! Handles inputs and printing, repeatedly.
 
