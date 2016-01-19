@@ -17,7 +17,7 @@ class Calculator
     result = operator.run(*op_args)
 
     # If the operator runs without raising exceptions
-    stack.pop(operator.number_of_arguments)
+    remove_values(operator.number_of_arguments)
     add_value(result)
   end
 
@@ -29,6 +29,12 @@ class Calculator
   def reset
     stack.clear
     nil
+  end
+
+  private
+
+  def remove_values(n)
+    stack.pop(n)
   end
 
 end

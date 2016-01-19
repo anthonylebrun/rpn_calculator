@@ -14,3 +14,6 @@ To start the calculator:
 
 Try out the quit, help, clear, and pi commands. It's really trivial to add your own! Same goes for operators!
 
+To run all tests:
+
+`rspec`
