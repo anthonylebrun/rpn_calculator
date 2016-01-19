@@ -3,7 +3,7 @@ module Commands
 
     SYNONYMS = ['quit', 'exit', 'q', nil]
 
-    def self.synonyms
+    def self.keys
       SYNONYMS
     end
 

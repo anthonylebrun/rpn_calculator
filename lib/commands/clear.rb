@@ -3,7 +3,7 @@ module Commands
 
     SYNONYMS = ['clear']
 
-    def self.synonyms
+    def self.keys
       SYNONYMS
     end
 

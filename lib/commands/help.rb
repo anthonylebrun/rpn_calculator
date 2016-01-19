@@ -3,7 +3,7 @@ module Commands
 
     SYNONYMS = ['help']
 
-    def self.synonyms
+    def self.keys
       SYNONYMS
     end
 

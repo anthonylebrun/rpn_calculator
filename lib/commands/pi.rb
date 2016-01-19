@@ -3,7 +3,7 @@ module Commands
 
     SYNONYMS = ['pi']
 
-    def self.synonyms
+    def self.keys
       SYNONYMS
     end
 

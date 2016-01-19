@@ -6,7 +6,7 @@ module Operators
     SYMBOLS = ['-']
     NUMBER_OF_ARGUMENTS = 2
 
-    def self.symbols
+    def self.keys
       SYMBOLS
     end
 
