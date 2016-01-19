@@ -9,15 +9,41 @@ require 'colorize'
 module MessagePrinter
 
   def self.success(message)
-    puts message.to_s.light_green
+    puts MessageColorer.new(message).success
   end
 
   def self.error(message)
-    puts message.to_s.light_red
+    puts MessageColorer.new(message).error
   end
 
   def self.notice(message)
-    puts message.to_s.light_blue
+    puts MessageColorer.new(message).notice
+  end
+
+  private # Not really
+
+  class MessageColorer
+
+    def initialize(message)
+      @message = message.to_s
+    end
+
+    def success
+      message.light_green
+    end
+
+    def error
+      message.light_red
+    end
+
+    def notice
+      message.light_blue
+    end
+
+    private
+
+    attr_reader :message
+
   end
 
 end
