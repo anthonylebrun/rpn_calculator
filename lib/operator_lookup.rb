@@ -6,6 +6,14 @@ require_relative './operators/index'
 # Returns nil if none found
 
 class OperatorLookup
+  
   include AbstractFactory.new(Operators)
   include FactorySearch
+
+  attr_reader :result
+
+  def initialize(query)
+    @result = find_by_key(query)
+  end
+
 end

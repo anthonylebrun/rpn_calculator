@@ -6,17 +6,13 @@
 # class Foo
 #   include AbstractFactory.new(FactoryWrapperModule)
 #   include FactorySearch
+#
+#   def foo(key)
+#     find_by_key(key)
+#   end
 # end
 
 module FactorySearch
-
-  attr_reader :result
-
-  def initialize(query)
-    @result = find_by_key(query)
-  end
-
-  private
 
   def find_by_key(query)
     factory = all_factories.find do |factory|
@@ -25,6 +21,8 @@ module FactorySearch
 
     factory && factory.new
   end
+
+  private
 
   def all_factories
     concrete_factories
