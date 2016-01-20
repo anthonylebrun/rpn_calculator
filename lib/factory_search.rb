@@ -1,5 +1,6 @@
 # Allows filtering of concrete_factories provided by
-# the AbstractFactory module
+# the AbstractFactory module. It expects the class to
+# have a concrete_factories method defined.
 
 # Usage:
 #
