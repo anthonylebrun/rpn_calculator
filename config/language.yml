@@ -1,7 +1,7 @@
 help:
   usage: 'For usage instructions see: https://gist.github.com/nilbus/29b0752086f59af3e2bb'
   learn: 'For more information on Reverse Polish notation, google it!'
-  commands: 'Available commands are help, clear, and quit'
+  commands: 'Available commands are help, clear, stack, quit and pi'
 
 errors:
   invalid_input: 'Invalid Input. Type `help` for more information.'
