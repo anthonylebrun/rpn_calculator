@@ -16,8 +16,8 @@
 module FactorySearch
 
   def find_by_key(query)
-    factory = all_factories.find do |factory|
-      factory.keys.include?(query)
+    factory = all_factories.find do |f|
+      f.keys.include?(query)
     end
 
     factory && factory.new
