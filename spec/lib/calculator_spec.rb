@@ -1,7 +1,6 @@
 require_relative '../../lib/calculator'
 
 describe Calculator do
-
   before :each do
     @calculator = Calculator.new
   end

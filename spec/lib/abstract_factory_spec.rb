@@ -1,7 +1,6 @@
 require_relative '../../lib/abstract_factory'
 
 describe AbstractFactory do
-
   before :each do
     @abstract_factory = AbstractFactory.new(Module.new)
   end
@@ -18,5 +17,4 @@ describe AbstractFactory do
       expect(Klass.new).to respond_to(:concrete_factories)
     end
   end
-
 end
