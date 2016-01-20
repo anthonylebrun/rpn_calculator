@@ -20,8 +20,6 @@ module MessagePrinter
     puts MessageColorer.new(message).notice
   end
 
-  private # Not really
-
   class MessageColorer
 
     def initialize(message)
