@@ -1,3 +1,5 @@
+require 'pry'
+
 RSpec.configure do |config|
 
   # rspec-mocks config goes here. You can use an alternate test double
