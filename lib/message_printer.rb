@@ -22,6 +22,8 @@ module MessagePrinter
 
   class MessageColorer
 
+    attr_reader :message
+
     def initialize(message)
       @message = message.to_s
     end
@@ -37,10 +39,6 @@ module MessagePrinter
     def notice
       message.light_blue
     end
-
-    private
-
-    attr_reader :message
 
   end
 
