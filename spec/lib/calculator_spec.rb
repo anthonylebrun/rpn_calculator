@@ -22,19 +22,19 @@ describe Calculator do
     end
 
     describe "#run_operator" do
-      let(:n) { 2 }
+      let(:n_operator_args) { 2 }
       let(:result) { 5 }
       let(:stack_after) { [1, result]}
 
       before :each do
         @addition = double('operator')
-        allow(@addition).to receive(:number_of_arguments) { n }
+        allow(@addition).to receive(:number_of_arguments) { n_operator_args }
         allow(@addition).to receive(:run) { result }
       end
 
-      it "should remove n - 1 values from the stack" do
+      it "should remove (number of operator arguments - 1) values from the stack" do
         @calculator.run_operator(@addition)
-        expect(@calculator.stack.size).to eq(stack.size - (n - 1))
+        expect(@calculator.stack.size).to eq(stack.size - (n_operator_args - 1))
       end
 
       it "should add the result to the stack" do
