@@ -1,6 +1,6 @@
 # README
 
-RPN Calculator based on instructions at: https://gist.github.com/nilbus/29b0752086f59af3e2bb
+An over engineered RPN Calculator based on instructions at: https://gist.github.com/nilbus/29b0752086f59af3e2bb
 
 ## Usage
 
